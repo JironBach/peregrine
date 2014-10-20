@@ -2,14 +2,13 @@
 
 # More info: http://docs.aws.amazon.com/AWSECommerceService/latest/DG/rest-signature.html
 
-# How to use
+# How to use:
 # a = Amazon.new
 # a.get("B00LFEHN96", "georbani-20")
 
 module Amazon
   require 'HTTParty'
   require 'cgi'
-  require 'pry'
   require "addressable/uri"
 
   ACCESS_KEY = ENV["AMAZON_ACCESS_KEY"]
