@@ -1,3 +1,3 @@
-class link < ActiveRecord::Base
+class Link < ActiveRecord::Base
   has_one :product
 end
