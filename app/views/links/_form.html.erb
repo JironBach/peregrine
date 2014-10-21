@@ -1,13 +1,11 @@
 <%= form_for(@link) do |f| %>
   <div class="field">
-    <%= f.label 'Amazon Url' %><br>
-    <%= f.text_field :amzn_url, placeholder: "placeholder text"%>
+    <%= f.text_field :amzn_url, placeholder: "Amazon URL"%>
   </div>
   <div class="field">
-    <%= f.label 'Affiliate Tag' %><br>
-    <%= f.text_field :aff_tag %>
+    <%= f.text_field :aff_tag, placeholder: "Affiliate Tag" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: "btn btn-primary" %>
   </div>
 <% end %>
