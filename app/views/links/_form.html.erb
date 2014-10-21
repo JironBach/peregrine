@@ -1,7 +1,13 @@
-<%= form_tag("/links", method: "post") do %>
-  <%= label_tag(:url, "Amazon URL:") %>
-  <%= text_field_tag(:url) %>
-  <%= label_tag(:aff_tag, "Affiliate Tag:") %>
-  <%= text_field_tag(:aff_tag) %>
-  <%= submit_tag("Generate") %>
+<%= form_for(@link) do |f| %>
+  <div class="field">
+    <%= f.label 'Amazon Url' %><br>
+    <%= f.number_field :amzn_url %>
+  </div>
+  <div class="field">
+    <%= f.label 'Affiliate Tag' %><br>
+    <%= f.text_field :aff_tag %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
 <% end %>

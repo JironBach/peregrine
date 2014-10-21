@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20141021005722) do
     t.integer "asin"
     t.string  "name"
     t.string  "amzn_url"
+    t.string  "aff_tag"
     t.string  "sm_img_url"
     t.string  "med_img_url"
     t.string  "lg_img_url"
