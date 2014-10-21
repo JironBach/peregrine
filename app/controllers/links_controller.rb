@@ -12,7 +12,7 @@ class LinksController < ApplicationController
     amazon_params = get_params(get_xml(asin, aff_tag))
 
     @link = Link.create(amazon_params)
-    @link.asin = asin
+    @link[:asin] = asin
     @link.aff_tag = aff_tag
     @link.amzn_aff_url = "www.amazon.com/gp/product/#{asin}/#{aff_tag}"
     @link.save
