@@ -1,3 +1,6 @@
+body{
+  background-image: image-url("bg-pattern.png");
+}
 #logo-wrapper{
   text-align: center;
   padding: 30px 0;
@@ -23,7 +26,7 @@ input {
   border-radius: 0;
 }
 
-.btn-generate{
+.btn-success{
   color: #ffffff;
   background-color: #5cb85c;
   border-color: #4cae4c;
@@ -37,7 +40,7 @@ input {
 }
 .feature-box {
   text-align: center;
-  background: rgba(220, 220, 220, 0.25);
+  background: rgba(255, 255, 255, 0.6);
 }
 
 .feature-msg {
