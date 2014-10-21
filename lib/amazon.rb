@@ -57,8 +57,20 @@ module Amazon
     HTTParty.get(signed_request(item_id, affiliate_tag))
   end
 
+  # Parses the amazon response to a hash
+  # Input: xml
+  # Output: hash of strings
   def get_params(xml)
-    puts xml
+    {
+      amzn_url: xml["ItemLookupResponse"]["Items"]["Item"]["DetailPageURL"],
+      name: xml["ItemLookupResponse"]["Items"]["Item"]["ItemAttributes"]["Title"],
+      sm_img_url: xml["ItemLookupResponse"]["Items"]["Item"]["SmallImage"]["URL"],
+      med_img_url: xml["ItemLookupResponse"]["Items"]["Item"]["MediumImage"]["URL"],
+      lg_img_url:xml["ItemLookupResponse"]["Items"]["Item"]["LargeImage"]["URL"],
+      reviews_url: xml["ItemLookupResponse"]["Items"]["Item"]["CustomerReviews"]["IFrameURL"]
+
+    }
   end
+
 end
 
