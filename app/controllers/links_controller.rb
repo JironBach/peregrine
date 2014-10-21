@@ -15,13 +15,12 @@ class LinksController < ApplicationController
     @link[:asin] = asin
     @link.aff_tag = aff_tag
     @link.amzn_aff_url = "www.amazon.com/gp/product/#{asin}/#{aff_tag}"
+    @link.save
     redirect_to @link
   end
 
   def show
     @link = Link.find(params[:id])
-    binding.pry
-    @link
   end
 
   private
