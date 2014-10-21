@@ -59,6 +59,9 @@ input {
   text-align: center;
   background: rgba(255, 255, 255, 0.6);
 }
+.feature-box h2{
+  padding-bottom:10px;
+}
 
 .feature-msg {
   padding:30px;
@@ -68,6 +71,9 @@ input {
   margin-bottom:30px;
 }
 
+.row > .row {
+  margin-bottom:0;
+}
 .article-wrapper{
   background: white;
   background-clip: content-box;
@@ -99,4 +105,16 @@ input {
   color: #C52500;
   font-size:18px;
 }
+.feature-msg .col-md-4 {
+  padding: 15px 10px;
+  border-right: 1px solid #eee;
+}
+.feature-msg .col-md-4:last-child {
+  border-right: 0;
+}
+.how-it-works-horizontal{
+  padding: 15px 0;
+  border-top: 1px dashed #eee;
+}
+
 
