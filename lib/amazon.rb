@@ -1,10 +1,5 @@
 # Handles HTTP Requests to Amazon Product Advertising API
-
 # More info: http://docs.aws.amazon.com/AWSECommerceService/latest/DG/rest-signature.html
-
-# How to use:
-# a = Amazon.new
-# a.get("B00LFEHN96", "georbani-20")
 
 module Amazon
   require 'HTTParty'
@@ -63,8 +58,13 @@ module Amazon
     # Gets the Amazon response from the request
     # Input: hash of strings
     # Output: XML
-    def get(item_id, affiliate_tag)
+    def get_xml(item_id, affiliate_tag)
       HTTParty.get(signed_request(item_id, affiliate_tag))
+    end
+
+    def get_params(xml)
+      puts xml
     end
   end
 end
+
