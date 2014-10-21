@@ -67,8 +67,8 @@ module Amazon
       sm_img_url: xml["ItemLookupResponse"]["Items"]["Item"]["SmallImage"]["URL"],
       med_img_url: xml["ItemLookupResponse"]["Items"]["Item"]["MediumImage"]["URL"],
       lg_img_url:xml["ItemLookupResponse"]["Items"]["Item"]["LargeImage"]["URL"],
-      reviews_url: xml["ItemLookupResponse"]["Items"]["Item"]["CustomerReviews"]["IFrameURL"]
-
+      reviews_url: xml["ItemLookupResponse"]["Items"]["Item"]["CustomerReviews"]["IFrameURL"],
+      sales_rank: xml["ItemLookupResponse"]["Items"]["Item"]["SalesRank"]
     }
   end
 

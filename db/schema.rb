@@ -11,24 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141021141906) do
+ActiveRecord::Schema.define(version: 20141021142258) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "links", force: true do |t|
-    t.string "asin"
-    t.string "name"
-    t.string "amzn_url"
-    t.string "aff_tag"
-    t.string "sm_img_url"
-    t.string "med_img_url"
-    t.string "lg_img_url"
-    t.string "reviews_url"
-    t.string "aff_url"
-    t.string "amzn_aff_url"
-    t.string "short_aff_url"
-    t.string "aff_url_clicks"
+    t.string  "asin"
+    t.string  "name"
+    t.string  "amzn_url"
+    t.string  "aff_tag"
+    t.string  "sm_img_url"
+    t.string  "med_img_url"
+    t.string  "lg_img_url"
+    t.string  "reviews_url"
+    t.string  "amzn_aff_url"
+    t.string  "short_aff_url"
+    t.string  "aff_url_clicks"
+    t.integer "sales_rank"
   end
 
 end
