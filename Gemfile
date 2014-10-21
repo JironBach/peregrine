@@ -16,7 +16,6 @@ gem 'coffee-rails', '~> 4.0.0'
 # gem 'therubyracer', platforms: :ruby
 
 gem 'httparty'
-# gem 'cgi'
 gem 'addressable'
 
 # Use jQuery as the JavaScript library

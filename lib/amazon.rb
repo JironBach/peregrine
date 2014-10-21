@@ -4,7 +4,7 @@
 module Amazon
   # require 'HTTParty'
   # require 'cgi'
-  # require 'addressable/uri'
+  require "addressable/uri"
 
   ACCESS_KEY = ENV["AMAZON_ACCESS_KEY"]
   SECRET_KEY = ENV["AMAZON_SECRET_KEY"]
