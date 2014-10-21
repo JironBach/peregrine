@@ -12,7 +12,7 @@ class LinksController < ApplicationController
     amazon_params = get_params(get_xml(asin, aff_tag))
 
     @link = Link.create(amazon_params)
-    @link.asin = asin
+    @link[:asin] = asin
     @link.aff_tag = aff_tag
     @link.amzn_aff_url = "www.amazon.com/gp/product/#{asin}/#{aff_tag}"
     redirect_to @link
@@ -20,7 +20,10 @@ class LinksController < ApplicationController
 
   def show
     @link = Link.find(params[:id])
+    binding.pry
+    @link
   end
+
   private
   def link_params
     params.require(:link).permit(:aff_tag, :amzn_url)
