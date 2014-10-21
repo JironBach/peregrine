@@ -2,12 +2,12 @@
 # More info: http://docs.aws.amazon.com/AWSECommerceService/latest/DG/rest-signature.html
 
 module Amazon
-  # require 'HTTParty'
-  # require 'cgi'
+
+  require 'cgi'
   require "addressable/uri"
 
-  ACCESS_KEY = ENV["AMAZON_ACCESS_KEY"]
-  SECRET_KEY = ENV["AMAZON_SECRET_KEY"]
+  ACCESS_KEY = ENV["AMZN_ACCESS_KEY"]
+  SECRET_KEY = ENV["AMZN_SECRET_KEY"]
 
   # Creates the query string
   # Input: none
