@@ -17,16 +17,6 @@ ActiveRecord::Schema.define(version: 20141020183754) do
   enable_extension "plpgsql"
 
   create_table "links", force: true do |t|
-    t.string  "aff_url"
-    t.string  "amzn_aff_url"
-    t.string  "short_aff_url"
-    t.string  "aff_url_clicks"
-    t.integer "product_id"
-  end
-
-  add_index "links", ["product_id"], name: "index_links_on_product_id", using: :btree
-
-  create_table "products", force: true do |t|
     t.integer "asin"
     t.string  "name"
     t.string  "amzn_url"
@@ -34,6 +24,10 @@ ActiveRecord::Schema.define(version: 20141020183754) do
     t.string  "med_img_url"
     t.string  "lg_img_url"
     t.string  "reviews_url"
+    t.string  "aff_url"
+    t.string  "amzn_aff_url"
+    t.string  "short_aff_url"
+    t.string  "aff_url_clicks"
   end
 
   create_table "sales_ranks", force: true do |t|

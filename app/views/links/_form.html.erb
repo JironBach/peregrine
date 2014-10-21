@@ -1,7 +1,7 @@
 <%= form_tag("/links", method: "post") do %>
-  <%= label_tag(:product_id, "Product ID:") %>
-  <%= text_field_tag(:product_id) %>
-  <%= label_tag(:affiliate_id, "Affiliate ID:") %>
-  <%= text_field_tag(:affiliate_id) %>
+  <%= label_tag(:url, "Amazon URL:") %>
+  <%= text_field_tag(:url) %>
+  <%= label_tag(:aff_tag, "Affiliate Tag:") %>
+  <%= text_field_tag(:aff_tag) %>
   <%= submit_tag("Generate") %>
 <% end %>

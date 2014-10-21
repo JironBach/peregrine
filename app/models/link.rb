@@ -1,3 +1,3 @@
 class Link < ActiveRecord::Base
-  has_one :product
+  has_many :sales_ranks
 end
