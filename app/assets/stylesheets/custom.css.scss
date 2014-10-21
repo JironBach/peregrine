@@ -7,3 +7,17 @@ input {
 .btn {
   border-radius: 0;
 }
+
+.feature-box {
+  text-align: center;
+  background: rgba(220, 220, 220, 0.25);
+  background-clip: content-box;
+}
+.feature-msg {
+  padding:30px;
+  font-size: 1.25em;
+}
+
+.row {
+  margin-bottom:30px;
+}

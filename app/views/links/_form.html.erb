@@ -1,9 +1,9 @@
 <%= form_for(@link) do |f| %>
   <div class="field">
-    <%= f.text_field :amzn_url, placeholder: "Amazon URL"%>
+    <%= f.text_field :amzn_url, placeholder: "Paste an Amazon product URL"%>
   </div>
   <div class="field">
-    <%= f.text_field :aff_tag, placeholder: "Affiliate Tag" %>
+    <%= f.text_field :aff_tag, placeholder: "Enter your Amazon affiliate tag" %>
   </div>
   <div class="actions">
     <%= f.submit "Generate", class: "btn btn-primary" %>
