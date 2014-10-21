@@ -10,12 +10,27 @@
             </div>
             <div class="col-md-10">
               <h1><%= @link.name %></h1>
-              Affiliate link: <%= text_field_tag "Affiliate link", @link.amzn_aff_url %>
-              Small image: <%= @link.sm_img_url %> <br \>
-              Medium image: <%= @link.med_img_url %> <br \>
-              Large image: <%= @link.lg_img_url %> <br \>
-              Sales rank: <%= @link.sales_rank %> <br \>
-              Reviews url: <%= @link.reviews_url %>
+
+              <div class="grouped-fields">
+                Affiliate link:
+                <%= text_field_tag "Affiliate link", @link.amzn_aff_url %>
+              </div>
+              <div class="grouped-fields">
+                Small image:
+                <%= text_field_tag "Small image", @link.sm_img_url %>
+              </div>
+              <div class="grouped-fields">
+                Medium image:
+                <%= text_field_tag "Medium image", @link.med_img_url %>
+              </div>
+              <div class="grouped-fields">
+                Large image:
+                <%= text_field_tag "Large image", @link.lg_img_url %>
+              </div>
+              <div class="grouped-fields">
+                Reviews url:
+                <%= text_field_tag "Reviews", @link.reviews_url %>
+              </div>
             </div>
           </div>
         </div>
