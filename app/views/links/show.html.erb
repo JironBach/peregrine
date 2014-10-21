@@ -1,2 +1,5 @@
 <%= image_tag @link.sm_img_url, alt: @link.name %>
 <%= @link.name %>
+Affiliate link: <%= @link.aff_url%>
+Original link with affiliate tag: <%= link_to @link.amzn_aff_url %>
+Small image url: <%= @link.sm_img_url %>
