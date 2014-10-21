@@ -1,18 +1,30 @@
 input {
   width: 100%;
   padding: 10px;
-  margin: 3px 0;
+  margin: 5px 0;
 }
 
 .btn {
   border-radius: 0;
 }
 
+.btn-generate{
+  color: #ffffff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+  padding: 8px;
+  font-size: 1.25em;
+}
+
+.generate-box {
+  background-color: #FFCC00;
+  padding: 15px;
+}
 .feature-box {
   text-align: center;
   background: rgba(220, 220, 220, 0.25);
-  background-clip: content-box;
 }
+
 .feature-msg {
   padding:30px;
 }
