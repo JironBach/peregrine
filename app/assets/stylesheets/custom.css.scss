@@ -22,7 +22,18 @@ h3 {
   text-align: center;
   padding: 30px 0;
   font-size: 2.2em;
+  display:block;
 }
+#logo-wrapper a{
+  color: inherit;
+  text-decoration: none;
+  font-weight: normal;
+}
+#logo-wrapper a:hover{
+  -webkit-filter: drop-shadow( 0 0 4px rgba(255,204,0,0.5) );
+            filter: drop-shadow( 0 0 4px rgba(255,204,0,0.5) );
+}
+
 #logo-img{
   display: inline-block;
   height: 50px;
