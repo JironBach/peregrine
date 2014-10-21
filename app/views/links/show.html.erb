@@ -5,8 +5,11 @@
       <div class="row">
         <div class="col-md-12">
           <div class="row">
-            <div class="col-md-2">
+            <div class="col-md-2 article-left-sidebar">
               <%= image_tag @link.sm_img_url, alt: @link.name %> <br \>
+              <div class="sales-rank">
+                <i class="glyphicon glyphicon-fire"></i> <span class="sales-rank-number"><%= @link.sales_rank %></span>
+              </div>
             </div>
             <div class="col-md-10">
               <h1><%= @link.name %></h1>
