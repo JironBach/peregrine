@@ -17,7 +17,7 @@ gem 'coffee-rails', '~> 4.0.0'
 
 gem 'httparty'
 # gem 'cgi'
-# gem 'addressable/uri'
+gem 'addressable'
 
 # Use jQuery as the JavaScript library
 gem 'jquery-rails', '~> 4.0.0.beta2'
