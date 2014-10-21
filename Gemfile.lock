@@ -189,6 +189,7 @@ DEPENDENCIES
   pry-byebug
   rails (= 4.2.0.beta2)
   rails_12factor
+  sass
   sass-rails (~> 5.0.0.beta1)
   sdoc (~> 0.4.0)
   spring
