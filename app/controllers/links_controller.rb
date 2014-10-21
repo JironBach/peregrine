@@ -1,5 +1,5 @@
 class LinksController < ApplicationController
-  # include Amazon
+  include Amazon
 
   def new
     @link = Link.new
