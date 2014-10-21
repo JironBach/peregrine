@@ -1,6 +1,23 @@
 body{
   background-image: image-url("bg-pattern.png");
 }
+
+h1 {
+  font-size: 22px;
+  margin: 0;
+  margin-bottom: 15px;
+}
+h2 {
+  font-size: 18px;
+  margin: 0;
+  margin-bottom: 12px;
+}
+h3 {
+  font-size: 16px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
 #logo-wrapper{
   text-align: center;
   padding: 30px 0;
@@ -50,3 +67,15 @@ input {
 .row {
   margin-bottom:30px;
 }
+
+.article-wrapper{
+  background: white;
+  background-clip: content-box;
+  padding: 0 30px 0 0;
+}
+
+.article-wrapper > .row{
+  padding: 30px;
+}
+
+
