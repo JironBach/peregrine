@@ -13,7 +13,6 @@ class CreateLinks < ActiveRecord::Migration
       t.string :short_aff_url
       t.string :aff_url_clicks
       t.timestamp
-
     end
   end
 end

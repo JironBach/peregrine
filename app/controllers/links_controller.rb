@@ -5,7 +5,9 @@ class LinksController < ApplicationController
 
   def create
     binding.pry
-    params[:url].match("/([a-zA-Z0-9]{10})(?:[/?]|$)")
+    @link = Link.new
+    asin = params[:url].match("/([a-zA-Z0-9]{10})(?:[/?]|$)")
+    @product = Product.find_or_create_by(asin: asin)
 
   end
 
