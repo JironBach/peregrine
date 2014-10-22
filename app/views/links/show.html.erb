@@ -54,7 +54,7 @@
                 <!-- Copy link js/swf button END -->
               </div>
               <div class="grouped-fields">
-                Medium image:
+                lgium image:
                 <%= text_field_tag "Medium image", @link.med_img_url, id: "med_img_url" %>
                 <!-- Copy link js/swf button START -->
                 <button class='my_clip_button btn btn-primary btn-xs' data-clipboard-target='med_img_url' data-clipboard-text='Nothing copied.' id='clip_button_two'  title='Click me to copy to clipboard.'>Copy</button>
@@ -68,11 +68,29 @@
               </div>
               <div class="grouped-fields">
                 Large image:
-                <%= text_field_tag "Large image", @link.lg_img_url %>
+                <%= text_field_tag "Large image", @link.lg_img_url, id: 'lg_img_url' %>
+                <!-- Copy link js/swf button START -->
+                <button class='my_clip_button btn btn-primary btn-xs' data-clipboard-target='lg_img_url' data-clipboard-text='Nothing copied.' id='clip_button_three'  title='Click me to copy to clipboard.'>Copy</button>
+                <script>
+                  $(document).ready(function() {
+                    var three = new ZeroClipboard($("#clip_button_three"))
+                    $(three.htmlBridge).tooltip({title: "copy to clipboard", placement: 'bottom'});
+                  });
+                </script>
+                <!-- Copy link js/swf button END -->
               </div>
               <div class="grouped-fields">
                 Reviews url:
-                <%= text_field_tag "Reviews", @link.reviews_url %>
+                <%= text_field_tag "Reviews", @link.reviews_url, id: 'reviews_url' %>
+                <!-- Copy link js/swf button START -->
+                <button class='my_clip_button btn btn-primary btn-xs' data-clipboard-target='reviews_url' data-clipboard-text='Nothing copied.' id='clip_button_four'  title='Click me to copy to clipboard.'>Copy</button>
+                <script>
+                  $(document).ready(function() {
+                    var four = new ZeroClipboard($("#clip_button_four"))
+                    $(four.htmlBridge).tooltip({title: "copy to clipboard", placement: 'bottom'});
+                  });
+                </script>
+                <!-- Copy link js/swf button END -->
               </div>
             </div>
           </div>
