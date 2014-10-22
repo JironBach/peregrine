@@ -5,19 +5,36 @@ class LinksController < ApplicationController
     @link = Link.new
   end
 
+
+  # def create
+  #   asin = link_params[:amzn_url].match("/([a-zA-Z0-9]{10})(?:[/?]|$)").to_s.gsub('/', "")
+  #   aff_tag = link_params[:aff_tag]
+  #   amazon_params = get_params(get_xml(asin, aff_tag))
+  #   @link = Link.create(amazon_params)
+  #   @link[:asin] = asin
+  #   @link.aff_tag = aff_tag
+  #   @link.amzn_aff_url = "http://www.amazon.com/gp/product/#{asin}/?tag=#{aff_tag}"
+  #   @link.save
+  #   redirect_to @link
+  # end
+
   def create
     asin = link_params[:amzn_url].match("/([a-zA-Z0-9]{10})(?:[/?]|$)").to_s.gsub('/', "")
     aff_tag = link_params[:aff_tag]
+    amzn_aff_url = "http://www.amazon.com/gp/product/#{asin}/?tag=#{aff_tag}"
 
-    amazon_params = get_params(get_xml(asin, aff_tag))
-
-    @link = Link.create(amazon_params)
-    @link[:asin] = asin
-    @link.aff_tag = aff_tag
+    @link = Link.create({asin: asin, aff_tag: link_params[:aff_tag], amzn_url: link_params[:amzn_url]})
+    @link.asin = asin
     @link.amzn_aff_url = "http://www.amazon.com/gp/product/#{asin}/?tag=#{aff_tag}"
+
+    # Call to Amazon API
+    @link.update(get_params(get_xml(asin, aff_tag)))
+
     @link.save
+
     redirect_to @link
   end
+
 
   def show
     @link = Link.find(params[:id])
