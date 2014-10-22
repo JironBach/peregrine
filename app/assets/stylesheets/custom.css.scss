@@ -145,3 +145,29 @@ input {
     display:none;
   }
 }
+
+#devise-menu{
+  text-align: center;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.notice{
+  display:block;
+  text-align:center;
+  background: rgba(93, 186, 93, 0.75);
+  color: #ffffff;
+}
+
+.alert{
+  display:block;
+  text-align:center;
+  background: rgba(255, 204, 0, 0.75);
+  color: #ffffff;
+  font-weight:bold;
+}
+
+.devise-form{
+  background: rgba(255, 255, 255, 0.75);
+  padding: 20px;
+}
