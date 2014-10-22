@@ -4,7 +4,11 @@
     <div class="form-example">e.g. http://www.amazon.com/Cards-Against-Humanity-LLC-CAHUS/dp/B004S8F7QM</div>
   </div>
   <div class="field">
-    <%= f.text_field :aff_tag, placeholder: "Enter your Amazon affiliate tag" %>
+    <% if user_signed_in? %>
+      <%= f.text_field :aff_tag, placeholder: "Enter your Amazon affiliate tag", value: current_user.aff_tag %>
+    <% else %>
+      <%= f.text_field :aff_tag, placeholder: "Enter your Amazon affiliate tag" %>
+    <% end %>
     <div class="form-example">e.g. georbani-20</div>
   </div>
   <div class="actions">
