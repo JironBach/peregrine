@@ -28,26 +28,19 @@
 
               <div class="grouped-fields">
                 Affiliate link:
-                <%= text_field_tag "Affiliate link", @link.amzn_aff_url %>
+                <%= text_field_tag "Affiliate link", @link.amzn_aff_url, id: "amzn_aff_link" %>
                 <%= link_to "test link", 'https://affiliate-program.amazon.com/gp/associates/network/tools/link-checker/main.html' %>
               <div class='demo-area'>
-                <button class='my_clip_button' data-clipboard-target='fe_text' data-clipboard-text='Default clipboard text from attribute' id='d_clip_button' title='Click me to copy to clipboard.'>
+                <button class='my_clip_button' data-clipboard-target='amzn_aff_link' data-clipboard-text='Default clipboard text from attribute' id='d_clip_button' title='Click me to copy to clipboard.'>
                   <b>Copy To Clipboard...</b>
                 </button>
-                <h4>
-                  <label for='fe_text'>Change Copy Text Here</label>
-                </h4>
-                <textarea cols='50' id='fe_text' rows='3'>Copy me!</textarea>
-              </div>
               <script>
                 $(document).ready(function() {
                   var clip = new ZeroClipboard($("#d_clip_button"))
                 });
-                $("#clear-test").on("click", function(){
-                  $("#fe_text").val("Copy me!");
-                  $("#testarea").val("");
-                });
               </script>
+              </div>
+
               </div>
               <div class="grouped-fields">
                 Small image:
