@@ -8,7 +8,19 @@
             <div class="col-md-2 article-left-sidebar">
               <%= image_tag @link.sm_img_url, alt: @link.name %> <br \>
               <div class="sales-rank">
-                <i class="glyphicon glyphicon-fire"></i> <span class="sales-rank-number"><%= @link.sales_rank %></span>
+
+                <div class="sales-rank-number"><%= @link.sales_rank %></div>
+                Sales Rank
+                <% if @link.sales_rank > 0 && @link.sales_rank < 100 %>
+                  <i class="glyphicon glyphicon-fire"></i>
+                  <i class="glyphicon glyphicon-fire"></i>
+                  <i class="glyphicon glyphicon-fire"></i>
+                <% elsif @link.sales_rank >= 100 && @link.sales_rank < 500 %>
+                  <i class="glyphicon glyphicon-fire"></i>
+                  <i class="glyphicon glyphicon-fire"></i>
+                <% else %>
+                  <i class="glyphicon glyphicon-fire"></i>
+                <% end %>
               </div>
             </div>
             <div class="col-md-10">
@@ -61,15 +73,15 @@
             <h2>How does it work?</h2>
               <div class="how-it-works-horizontal">
                 <h3><i class="glyphicon glyphicon-link"></i></h3>
-                Paste an Amazon product URL
+                1. Paste an Amazon product URL
               </div>
               <div class="how-it-works-horizontal">
                 <h3><i class="glyphicon glyphicon-briefcase"></i></h3>
-                Enter your Amazon affiliate tag
+                2. Enter your Amazon affiliate tag
               </div>
               <div class="how-it-works-horizontal">
                 <h3><i class="glyphicon glyphicon-flash"></i></h3>
-                Click "Generate"
+                3. Click "Generate"
               </div>
           </div>
         </div>
