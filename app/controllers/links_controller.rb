@@ -14,7 +14,7 @@ class LinksController < ApplicationController
     @link = Link.create(amazon_params)
     @link[:asin] = asin
     @link.aff_tag = aff_tag
-    @link.amzn_aff_url = "www.amazon.com/gp/product/#{asin}/#{aff_tag}"
+    @link.amzn_aff_url = "http://www.amazon.com/gp/product/#{asin}/?tag=#{aff_tag}"
     @link.save
     redirect_to @link
   end
