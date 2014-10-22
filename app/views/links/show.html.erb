@@ -29,17 +29,15 @@
               <div class="grouped-fields">
                 Affiliate link:
                 <%= text_field_tag "Affiliate link", @link.amzn_aff_url, id: "amzn_aff_link" %>
-                <%= link_to "test link", 'https://affiliate-program.amazon.com/gp/associates/network/tools/link-checker/main.html' %>
-              <div class='demo-area'>
-                <button class='my_clip_button' data-clipboard-target='amzn_aff_link' data-clipboard-text='Default clipboard text from attribute' id='d_clip_button' title='Click me to copy to clipboard.'>
-                  <b>Copy To Clipboard...</b>
-                </button>
-              <script>
-                $(document).ready(function() {
-                  var clip = new ZeroClipboard($("#d_clip_button"))
-                });
-              </script>
-              </div>
+                <button class='my_clip_button' data-clipboard-target='amzn_aff_link' data-clipboard-text='Nothing copied.' id='clip_button' title='Click me to copy to clipboard.'>Copy</button>
+                <script>
+                  $(document).ready(function() {
+                    var clip = new ZeroClipboard($("#clip_button"))
+                  });
+                </script>
+                <%= link_to "test link", 'https://affiliate-program.amazon.com/gp/associates/network/tools/link-checker/main.html', class: "btn btn-success" %>
+
+
 
               </div>
               <div class="grouped-fields">
