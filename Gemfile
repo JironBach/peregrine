@@ -39,6 +39,9 @@ gem 'rails_12factor'
 # Copy to clipboard javascript
 gem 'zeroclipboard-rails'
 
+# User login
+gem 'devise'
+
 # gem 'client_side_validations'
 
 # Use ActiveModel has_secure_password
