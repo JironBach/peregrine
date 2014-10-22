@@ -29,28 +29,29 @@
               <div class="grouped-fields">
                 Affiliate link:
                 <%= text_field_tag "Affiliate link", @link.amzn_aff_url, id: "amzn_aff_link" %>
+                <!-- Copy link js/swf button START -->
                 <button class='my_clip_button btn btn-primary btn-xs' data-clipboard-target='amzn_aff_link' data-clipboard-text='Nothing copied.' id='clip_button'  title='Click me to copy to clipboard.'>Copy</button>
                 <script>
-                  // $(document).ready(function() {
-                  //   var clip = new ZeroClipboard($("#clip_button"))
-                  // });
                   $(document).ready(function() {
                     var zero = new ZeroClipboard($("#clip_button"))
                     $(zero.htmlBridge).tooltip({title: "copy to clipboard", placement: 'bottom'});
-                    $("button::visited#clip_button").append('<span>Copied</span>');
                   });
                 </script>
-
-
-
-                <%= link_to "test link", 'https://affiliate-program.amazon.com/gp/associates/network/tools/link-checker/main.html', class: "btn btn-default btn-xs", target: "_blank"%>
-
-
-
+                <!-- Copy link js/swf button END -->
+                <%= link_to "Test link", 'https://affiliate-program.amazon.com/gp/associates/network/tools/link-checker/main.html', class: "btn btn-default btn-xs", target: "_blank"%>
               </div>
               <div class="grouped-fields">
                 Small image:
-                <%= text_field_tag "Small image", @link.sm_img_url %>
+                <%= text_field_tag "Small image", @link.sm_img_url, id: "sm_img_url" %>
+                <!-- Copy link js/swf button START -->
+                <button class='my_clip_button btn btn-primary btn-xs' data-clipboard-target='sm_img_url' data-clipboard-text='Nothing copied.' id='clip_button_one'  title='Click me to copy to clipboard.'>Copy</button>
+                <script>
+                  $(document).ready(function() {
+                    var one = new ZeroClipboard($("#clip_button_one"))
+                    $(one.htmlBridge).tooltip({title: "copy to clipboard", placement: 'bottom'});
+                  });
+                </script>
+                <!-- Copy link js/swf button END -->
               </div>
               <div class="grouped-fields">
                 Medium image:
