@@ -23,6 +23,8 @@ class LinksController < ApplicationController
     aff_tag = link_params[:aff_tag]
     amzn_aff_url = "http://www.amazon.com/gp/product/#{asin}/?tag=#{aff_tag}"
 
+    binding.pry
+
     @link = Link.create({asin: asin, aff_tag: aff_tag, amzn_url: link_params[:amzn_url], amzn_aff_url: amzn_aff_url})
 
     # Call to Amazon API
