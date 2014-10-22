@@ -36,6 +36,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # To make Heroku happy
 gem 'rails_12factor'
 
+# Copy to clipboard javascript
+gem 'zeroclipboard-rails'
+
 # gem 'client_side_validations'
 
 # Use ActiveModel has_secure_password
