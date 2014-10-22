@@ -12,7 +12,6 @@ class LinksController < ApplicationController
 
     @link = Link.create({asin: asin, aff_tag: aff_tag, amzn_url: link_params[:amzn_url], amzn_aff_url: amzn_aff_url})
     current_user.aff_tag = aff_tag
-    binding.pry
 
     # Call to Amazon API
     @link.update(get_params(get_xml(asin, aff_tag)))
