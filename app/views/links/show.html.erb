@@ -55,7 +55,16 @@
               </div>
               <div class="grouped-fields">
                 Medium image:
-                <%= text_field_tag "Medium image", @link.med_img_url %>
+                <%= text_field_tag "Medium image", @link.med_img_url, id: "med_img_url" %>
+                <!-- Copy link js/swf button START -->
+                <button class='my_clip_button btn btn-primary btn-xs' data-clipboard-target='med_img_url' data-clipboard-text='Nothing copied.' id='clip_button_two'  title='Click me to copy to clipboard.'>Copy</button>
+                <script>
+                  $(document).ready(function() {
+                    var two = new ZeroClipboard($("#clip_button_two"))
+                    $(two.htmlBridge).tooltip({title: "copy to clipboard", placement: 'bottom'});
+                  });
+                </script>
+                <!-- Copy link js/swf button END -->
               </div>
               <div class="grouped-fields">
                 Large image:
