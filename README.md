@@ -1,28 +1,21 @@
-## README
+## About
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Peregrine helps you quickly generate Amazon affiliate links.
 
-Things you may want to cover:
+## How does it work?
 
-* Ruby version
+1. Paste an Amazon product URL
+2. Enter your Amazon affiliate tag
+3. Click "Generate"
 
-* System dependencies
+## Technology
 
-* Configuration
+Peregrine generates the affiliate url for any given product URL.
 
-* Database creation
+It also integrates with the Amazon API to retrieve information such as:
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Image URLs
+- Sales Rank (Amazon Best Seller Rank)
+- Review URLs
 
 
-Please feel free to use a different markup language if you do not plan to run
-`rake doc:app`.
