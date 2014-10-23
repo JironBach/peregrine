@@ -15,6 +15,7 @@ class LinksController < ApplicationController
 
     # Call to Amazon API
     @link.update(get_params(get_xml(asin, aff_tag)))
+    current_user.save
     @link.save
 
     redirect_to @link
