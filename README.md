@@ -18,4 +18,36 @@ It also integrates with the Amazon API to retrieve information such as:
 - Sales Rank (Amazon Best Seller Rank)
 - Review URLs
 
+# Changelog
+
+## v1.0 - 10/22/2014
+
+This beta release offers:
+- Ability to generate affiliate links from Amazon product URLs
+- Ability to access more product resources upon generation, such as image URLs and Best Seller Rank
+- Ability to click-to-copy generated URLs
+- Ability to login and save your affiliate tag and not retype it on every link generation
+- Ability to change your profile information and request a password reminder via email
+
+### Added
+
+- Favicon
+- 'Reset your password' emails
+- Ability to generate affiliate URLs from link show page
+- Copy URL javascript buttons
+- Ability for user to save affiliate tag
+
+## Future Features
+
+- Form validations
+- Copy markdown javascript link
+- Trackable link generator
+- Link shortener
+- User analytics
+- Other product recommendations
+- On-site Amazon product search
+- Bookmarklet
+
+
+
 
