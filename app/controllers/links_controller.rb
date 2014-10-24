@@ -6,6 +6,16 @@ class LinksController < ApplicationController
   end
 
   def create
+
+    # is this an amazon url?
+      # yes: continue to next question
+      # no: notice "This is not valid amazon url. Please try again and make sure your URL looks something like 'http://amazon.com/...'"
+    # is this a product url?
+      # yes: show product url page
+      # no: create an affiliate link for an Amazon non-product page
+
+
+
     asin = get_asin
     aff_tag = link_params[:aff_tag]
     amzn_aff_url = "http://www.amazon.com/gp/product/#{asin}/?tag=#{aff_tag}"
