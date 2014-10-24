@@ -7,15 +7,7 @@ class LinksController < ApplicationController
 
   def create
 
-    # is this an amazon url?
-      # yes: continue to next question
-      # no: notice "This is not valid amazon url. Please try again and make sure your URL looks something like 'http://amazon.com/...'"
-    # is this a product url?
-      # yes: show product url page
-      # no: create an affiliate link for an Amazon non-product page
-
-
-    save_aff_tag_if_user_logged_in
+    return redirect_to :back, alert: "Please enter an affiliate tag." if link_params[:aff_tag] == ""
 
     if amazon_url?
       if product_url?
@@ -40,6 +32,8 @@ class LinksController < ApplicationController
     else
       redirect_to :back, alert: "Please enter a valid Amazon URL."
     end
+
+    update_aff_tag_if_user_logged_in
   end
 
 
@@ -66,7 +60,7 @@ class LinksController < ApplicationController
     link_params[:amzn_url].match("/([a-zA-Z0-9]{10})(?:[/?]|$)").to_s.gsub('/', "")
   end
 
-  def save_aff_tag_if_user_logged_in
+  def update_aff_tag_if_user_logged_in
     if user_signed_in?
       current_user.aff_tag = link_params[:aff_tag]
       current_user.save
