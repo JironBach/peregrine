@@ -20,6 +20,15 @@ It also integrates with the Amazon API to retrieve information such as:
 
 # Changelog
 
+## v1.0.1 - 10/22/2014
+
+- Google Analytics
+
+Minor:
+
+- Beta icon
+- Explanation for sales rank
+
 ## v1.0 - 10/22/2014
 
 This beta release offers:
