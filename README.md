@@ -85,6 +85,8 @@ This beta release offers:
 - [ ] 60sec explainer video
 - [ ] 10min demo video
 - [ ] Ads (Adsense?)
+- [ ] Blog posts
+- [ ] Reach out to affiliate marketers who write about making money with Amazon
 
 
 
