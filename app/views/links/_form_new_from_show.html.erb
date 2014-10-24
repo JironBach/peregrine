@@ -1,13 +1,13 @@
 <%= form_for @new_link do |f| %>
   <div class="field">
-    <%= f.text_field :amzn_url, placeholder: "Paste an Amazon product URL"%>
+    <%= f.text_field :amzn_url, placeholder: "Paste an Amazon product URL", required: true%>
     <div class="form-example">e.g. http://www.amazon.com/Cards-Against-Humanity-LLC-CAHUS/dp/B004S8F7QM</div>
   </div>
   <div class="field">
     <% if user_signed_in? %>
-      <%= f.text_field :aff_tag, placeholder: "Enter your Amazon affiliate tag", value: current_user.aff_tag %>
+      <%= f.text_field :aff_tag, placeholder: "Enter your Amazon affiliate tag", value: current_user.aff_tag, required: true %>
     <% else %>
-      <%= f.text_field :aff_tag, placeholder: "Enter your Amazon affiliate tag" %>
+      <%= f.text_field :aff_tag, placeholder: "Enter your Amazon affiliate tag", required: true %>
     <% end %>
     <div class="form-example">e.g. georbani-20</div>
   </div>
