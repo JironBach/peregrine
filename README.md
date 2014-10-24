@@ -20,11 +20,10 @@ It also integrates with the Amazon API to retrieve information such as:
 
 # Currently Working On
 
-[] Form validations
+[] Better forms / validations
 
 # Future Features
 
-[] Form validations
 [] Copy markdown javascript link
 [] Trackable link generator
 [] Link shortener
@@ -32,7 +31,7 @@ It also integrates with the Amazon API to retrieve information such as:
 [] Other product recommendations
 [] On-site Amazon product search
 [] Bookmarklet
-[] Ads (Adsense / Amazon)
+[] Ads (Adsense)
 
 # Changelog
 
