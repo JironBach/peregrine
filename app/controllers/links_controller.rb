@@ -6,7 +6,7 @@ class LinksController < ApplicationController
   end
 
   def create
-    asin = link_params[:amzn_url].match("/([a-zA-Z0-9]{10})(?:[/?]|$)").to_s.gsub('/', "")
+    asin = get_asin
     aff_tag = link_params[:aff_tag]
     amzn_aff_url = "http://www.amazon.com/gp/product/#{asin}/?tag=#{aff_tag}"
 
@@ -34,5 +34,8 @@ class LinksController < ApplicationController
   private
   def link_params
     params.require(:link).permit(:aff_tag, :amzn_url)
+  end
+  def get_asin
+    link_params[:amzn_url].match("/([a-zA-Z0-9]{10})(?:[/?]|$)").to_s.gsub('/', "")
   end
 end
