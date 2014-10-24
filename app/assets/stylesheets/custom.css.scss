@@ -157,14 +157,16 @@ input {
   text-align:center;
   background: rgba(93, 186, 93, 0.75);
   color: #ffffff;
+  border-radius: 0;
 }
 
 .alert{
   display:block;
   text-align:center;
-  background: rgba(255, 204, 0, 0.75);
+  background: rgba(255, 50, 0, 0.75);
   color: #ffffff;
   font-weight:bold;
+  border-radius: 0;
 }
 
 .devise-form{
