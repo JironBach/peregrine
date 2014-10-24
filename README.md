@@ -18,13 +18,57 @@ It also integrates with the Amazon API to retrieve information such as:
 - Sales Rank (Amazon Best Seller Rank)
 - Review URLs
 
-# Currently Working On
+# Changelog
 
-[] Better forms / validations
+## v1.1.1 - in development
+
+### Added
+
+[x] Better forms / validations
+
+### Updated
+
+Nothing notable.
+
+### Removed
+
+Nothing notable.
+
+## v1.1.0 - 10/22/2014
+
+### Added
+
+[x] Google Analytics
+[x] Beta icon
+[x] Explanation for sales rank
+
+### Updated
+
+Nothing notable.
+
+### Removed
+
+Nothing notable.
+
+## v1.0 - 10/22/2014
+
+This beta release offers:
+[x] Ability to generate affiliate links from Amazon product URLs
+[x] Ability to access more product resources upon generation, such as image URLs and Best Seller Rank
+[x] Ability to click-to-copy generated URLs
+[x] Ability to login and save your affiliate tag and not retype it on every link generation
+[x] Ability to change your profile information and request a password reminder via email
+
+### Added
+
+[x] Favicon
+[x] 'Reset your password' emails
+[x] Ability to generate affiliate URLs from link show page
+[x] Copy URL javascript buttons
+[x] Ability for user to save affiliate tag
 
 # Future Features
 
-[] Copy markdown javascript link
 [] Trackable link generator
 [] Link shortener
 [] User analytics
@@ -32,36 +76,7 @@ It also integrates with the Amazon API to retrieve information such as:
 [] On-site Amazon product search
 [] Bookmarklet
 [] Ads (Adsense)
-
-# Changelog
-
-## v1.0.1 - 10/22/2014
-
-- Google Analytics
-
-Minor:
-
-- Beta icon
-- Explanation for sales rank
-
-## v1.0 - 10/22/2014
-
-This beta release offers:
-- Ability to generate affiliate links from Amazon product URLs
-- Ability to access more product resources upon generation, such as image URLs and Best Seller Rank
-- Ability to click-to-copy generated URLs
-- Ability to login and save your affiliate tag and not retype it on every link generation
-- Ability to change your profile information and request a password reminder via email
-
-### Added
-
-- Favicon
-- 'Reset your password' emails
-- Ability to generate affiliate URLs from link show page
-- Copy URL javascript buttons
-- Ability for user to save affiliate tag
-
-
+[] Copy markdown javascript link
 
 
 
