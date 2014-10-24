@@ -18,7 +18,6 @@ class LinksController < ApplicationController
     save_aff_tag_if_user_logged_in
 
     if amazon_url?
-
       if product_url?
 
         @link = Link.create({
@@ -30,8 +29,6 @@ class LinksController < ApplicationController
 
         # Call to Amazon API
         @link.update(get_params(get_xml(get_asin, link_params[:aff_tag])))
-
-
         @link.save
 
         redirect_to @link
