@@ -69,14 +69,24 @@ This beta release offers:
 
 # Future Features
 
+## Technology
+
 [] Trackable link generator
 [] Link shortener
 [] User analytics
 [] Other product recommendations
 [] On-site Amazon product search
 [] Bookmarklet
-[] Ads (Adsense)
-[] Copy markdown javascript link
+[] Copy HTML tag javascript button for link/image
+[] XML sitemap & Google Webmaster Tools
+
+## Marketing
+
+[] 60sec explainer video
+[] 10min demo video
+[] Ads (Adsense?)
+
+
 
 
 
