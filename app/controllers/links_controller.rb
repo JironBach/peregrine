@@ -17,27 +17,32 @@ class LinksController < ApplicationController
 
     save_aff_tag_if_user_logged_in
 
-    if product_url?
+    if amazon_url?
 
-      @link = Link.create({
-        asin: get_asin,
-        aff_tag: link_params[:aff_tag],
-        amzn_url: link_params[:amzn_url],
-        amzn_aff_url: "http://www.amazon.com/gp/product/#{get_asin}/?tag=#{link_params[:aff_tag]}"
-        })
+      if product_url?
 
-      # Call to Amazon API
-      @link.update(get_params(get_xml(get_asin, link_params[:aff_tag])))
+        @link = Link.create({
+          asin: get_asin,
+          aff_tag: link_params[:aff_tag],
+          amzn_url: link_params[:amzn_url],
+          amzn_aff_url: "http://www.amazon.com/gp/product/#{get_asin}/?tag=#{link_params[:aff_tag]}"
+          })
+
+        # Call to Amazon API
+        @link.update(get_params(get_xml(get_asin, link_params[:aff_tag])))
 
 
-      @link.save
+        @link.save
 
-      redirect_to @link
+        redirect_to @link
+
+      else
+        redirect_to :back, alert: "Please enter a Amazon product URL."
+      end
 
     else
       redirect_to :back, alert: "Please enter a valid Amazon URL."
     end
-
   end
 
 
@@ -50,6 +55,10 @@ class LinksController < ApplicationController
 
   def link_params
     params.require(:link).permit(:aff_tag, :amzn_url)
+  end
+
+  def amazon_url?
+    link_params[:amzn_url].match("amazon.com") ? true : false
   end
 
   def product_url?
