@@ -8,9 +8,9 @@
             <div class="col-md-2 article-left-sidebar">
               <%= image_tag @link.sm_img_url, alt: @link.name %> <br \>
               <div class="sales-rank">
-
+              <% if @link.sales_rank %>
                 <div class="sales-rank-number"><%= @link.sales_rank %></div>
-                Sales Rank<br>
+                Best Seller Rank<br>
                 <% if @link.sales_rank > 0 && @link.sales_rank < 100 %>
                   <i class="glyphicon glyphicon-fire"></i>
                   <i class="glyphicon glyphicon-fire"></i>
@@ -22,6 +22,7 @@
                   <i class="glyphicon glyphicon-fire"></i>
                 <% end %>
                 <div id="sales-rank-whats-this"><%= link_to "What's this?", "http://www.amazon.com/gp/help/customer/display.html?nodeId=525376", target: "_blank" %></div>
+              <% end %>
               </div>
             </div>
             <div class="col-md-10">

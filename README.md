@@ -18,6 +18,8 @@ It also integrates with the Amazon API to retrieve information such as:
 - Sales Rank (Amazon Best Seller Rank)
 - Review URLs
 
+-------------------------------------------
+
 # Changelog
 
 ## v1.1.1 - in development
@@ -25,10 +27,11 @@ It also integrates with the Amazon API to retrieve information such as:
 ### Added
 
 - [x] Better forms / validations
+- [ ] Footer
 
 ### Updated
 
-Nothing notable.
+- [ ] The way sales rank was displayed
 
 ### Removed
 
@@ -79,6 +82,7 @@ This beta release offers:
 - [ ] Bookmarklet
 - [ ] Copy HTML tag javascript button for link/image
 - [ ] XML sitemap & Google Webmaster Tools
+- [ ] Estimated commission based on category/volume (see [Associates Program Advertising Fee Schedule](https://affiliate-program.amazon.com/gp/associates/help/operating/advertisingfees))
 
 ## Marketing
 
