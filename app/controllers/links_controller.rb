@@ -66,4 +66,6 @@ class LinksController < ApplicationController
       current_user.save
     end
   end
+
+
 end
