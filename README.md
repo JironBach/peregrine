@@ -28,7 +28,6 @@ It also integrates with the Amazon API to retrieve information such as:
 
 - [x] Better forms / validations
 - [x] Footer
-- [ ] Other product recommendations
 
 ### Updated
 
@@ -75,6 +74,7 @@ This beta release offers:
 
 ## Technology
 
+- [ ] Other product recommendations
 - [ ] Trackable link generator
 - [ ] Link shortener
 - [ ] User analytics
