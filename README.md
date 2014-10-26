@@ -28,10 +28,11 @@ It also integrates with the Amazon API to retrieve information such as:
 
 - [x] Better forms / validations
 - [ ] Footer
+- [ ] Other product recommendations
 
 ### Updated
 
-- [ ] The way sales rank was displayed
+- [x] The way sales rank was displayed
 
 ### Removed
 
@@ -77,12 +78,12 @@ This beta release offers:
 - [ ] Trackable link generator
 - [ ] Link shortener
 - [ ] User analytics
-- [ ] Other product recommendations
 - [ ] On-site Amazon product search
 - [ ] Bookmarklet
 - [ ] Copy HTML tag javascript button for link/image
 - [ ] XML sitemap & Google Webmaster Tools
 - [ ] Estimated commission based on category/volume (see [Associates Program Advertising Fee Schedule](https://affiliate-program.amazon.com/gp/associates/help/operating/advertisingfees))
+- [ ] Display reviews (stars and # of reviews)
 
 ## Marketing
 
