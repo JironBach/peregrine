@@ -27,8 +27,9 @@ It also integrates with the Amazon API to retrieve information such as:
 ### Added
 
 - [x] Better forms / validations
-- [ ] Footer
+- [x] Footer
 - [ ] Other product recommendations
+- [ ] Material Design CSS
 
 ### Updated
 
