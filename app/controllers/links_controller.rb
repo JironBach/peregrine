@@ -12,17 +12,10 @@ class LinksController < ApplicationController
     if amazon_url?
       if product_url?
 
-        @link = Link.create({
-          asin: get_asin,
-          aff_tag: link_params[:aff_tag],
-          amzn_url: link_params[:amzn_url],
-          amzn_aff_url: "http://www.amazon.com/gp/product/#{get_asin}/?tag=#{link_params[:aff_tag]}"
-          })
+        amzn_link = Amazon.new(get_asin, link_params[:aff_tag])
 
-        # Call to Amazon API
-        @link.update(get_params(get_xml(get_asin, link_params[:aff_tag])))
+        @link = Link.create(amzn_link.product_info)
         @link.save
-
         redirect_to @link
 
       else
@@ -38,8 +31,8 @@ class LinksController < ApplicationController
 
 
   def show
-    binding.pry
     @link = Link.find(params[:id])
+    binding.pry
     @new_link = Link.new
   end
 

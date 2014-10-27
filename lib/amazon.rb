@@ -24,6 +24,13 @@ module Amazon
       add_amazon_info
     end
 
+    # Gets the Amazon response from the request
+    # Input: hash of strings
+    # Output: XML
+    def get_xml(item_id, affiliate_tag)
+      HTTParty.get(signed_request(item_id, affiliate_tag))
+    end
+
     private
 
     # Returns product url without quary params (this is not an affiliate link)
@@ -53,7 +60,7 @@ module Amazon
         Version: Time.now.getutc.strftime("%F"),
         Timestamp: Time.now.getutc.strftime("%FT%TZ"),
         Operation: "ItemLookup",
-        ResponseGroup: "ItemAttributes,Images,Reviews,SalesRank",
+        ResponseGroup: "ItemAttributes,Images,Reviews,Similarities,SalesRank",
         Service: "AWSECommerceService"
       }
 
@@ -94,13 +101,6 @@ module Amazon
         reviews_url: xml["ItemLookupResponse"]["Items"]["Item"]["CustomerReviews"]["IFrameURL"],
         sales_rank: xml["ItemLookupResponse"]["Items"]["Item"]["SalesRank"]
       }
-    end
-
-    # Gets the Amazon response from the request
-    # Input: hash of strings
-    # Output: XML
-    def get_xml(item_id, affiliate_tag)
-      HTTParty.get(signed_request(item_id, affiliate_tag))
     end
 
     # Calls the Amazon API and adds the extra params in the @product_info hash
