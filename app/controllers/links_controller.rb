@@ -38,6 +38,7 @@ class LinksController < ApplicationController
 
 
   def show
+    binding.pry
     @link = Link.find(params[:id])
     @new_link = Link.new
   end

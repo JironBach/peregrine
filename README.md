@@ -32,7 +32,7 @@ It also integrates with the Amazon API to retrieve information such as:
 
 ### Updated
 
-Nothing notable.
+- [ ] Amazon module to class + improvements
 
 ### Removed
 
