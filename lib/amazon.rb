@@ -100,6 +100,7 @@ module Amazon
         lg_img_url:xml["ItemLookupResponse"]["Items"]["Item"]["LargeImage"]["URL"],
         reviews_url: xml["ItemLookupResponse"]["Items"]["Item"]["CustomerReviews"]["IFrameURL"],
         sales_rank: xml["ItemLookupResponse"]["Items"]["Item"]["SalesRank"]
+        similarities: xml["ItemLookupResponse"]["Items"]["Item"]["SimilarProducts"] # => [{"ASIN"=>"...", "Title"=>"..."}]
       }
     end
 
