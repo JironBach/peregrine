@@ -22,7 +22,21 @@ It also integrates with the Amazon API to retrieve information such as:
 
 # Changelog
 
-## v1.1.1 - in development
+## v1.1.2 - in development
+
+### Added
+
+- [ ] Other product recommendations + generate their links with single click
+
+### Updated
+
+Nothing notable.
+
+### Removed
+
+Nothing notable.
+
+## v1.1.1 - 2014/10/26
 
 ### Added
 
@@ -74,7 +88,7 @@ This beta release offers:
 
 ## Technology
 
-- [ ] Other product recommendations
+- [ ] Other product recommendations + generate their links with single click
 - [ ] Trackable link generator
 - [ ] Link shortener
 - [ ] User analytics
