@@ -8,15 +8,29 @@ class Amazon
   ACCESS_KEY = ENV["AMZN_ACCESS_KEY"]
   SECRET_KEY = ENV["AMZN_SECRET_KEY"]
 
+  @product_info ={}
+
   def initialize(asin, aff_tag)
     @product_info = {
-      asin: asin
-      aff_tag: aff_tag
+      asin: asin,
+      aff_tag: aff_tag,
+      amzn_url: clean_amzn_url(asin),
+      amzn_aff_url: amzn_aff_url(asin, aff_tag)
     }
+  end
 
+  def add_amazon_info
+    @product_info.merge(get_params(get_xml(get_asin, link_params[:aff_tag])))
   end
 
   private
+
+  # Returns product url without quary params (this is not an affiliate link)
+  # Input: string, string
+  # Output: string
+  def clean_amzn_url(asin)
+    "http://www.amazon.com/gp/product/#{asin}"
+  end
 
   # Returns product affiliate url
   # Input: string, string
