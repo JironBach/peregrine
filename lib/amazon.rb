@@ -27,8 +27,8 @@ module Amazon
     # Gets the Amazon response from the request
     # Input: hash of strings
     # Output: XML
-    def get_xml(item_id, affiliate_tag)
-      HTTParty.get(signed_request(item_id, affiliate_tag))
+    def get_xml(asin = @product_info[:asin], aff_tag = @product_info[:aff_tag])
+      HTTParty.get(signed_request(@product_info[:asin], @product_info[:aff_tag]))
     end
 
     private
