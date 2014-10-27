@@ -3,10 +3,28 @@ require "addressable/uri"
 
 class Amazon
 
+  attr_getter :product_info
+
   ACCESS_KEY = ENV["AMZN_ACCESS_KEY"]
   SECRET_KEY = ENV["AMZN_SECRET_KEY"]
 
+  def initialize(asin, aff_tag)
+    @product_info = {
+      asin: asin
+      aff_tag: aff_tag
+    }
+
+  end
+
   private
+
+  # Returns product affiliate url
+  # Input: string, string
+  # Output: string
+  def amzn_aff_url(asin, aff_tag)
+    "http://www.amazon.com/gp/product/#{asin}/?tag=#{aff_tag}"
+  end
+
   # Creates the query string
   # Input: none
   # Output: string
