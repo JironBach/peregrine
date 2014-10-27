@@ -18,9 +18,11 @@ It also integrates with the Amazon API to retrieve information such as:
 - Sales Rank (Amazon Best Seller Rank)
 - Review URLs
 
--------------------------------------------
+
 
 # Changelog
+
+--------------------------
 
 ## v1.1.2 - in development
 
@@ -35,6 +37,8 @@ Nothing notable.
 ### Removed
 
 Nothing notable.
+
+--------------------------
 
 ## v1.1.1 - 2014/10/26
 
@@ -92,7 +96,6 @@ This beta release offers:
 - [ ] Trackable link generator
 - [ ] Link shortener
 - [ ] User analytics
-- [ ] On-site Amazon product search
 - [ ] Bookmarklet
 - [ ] Copy HTML tag javascript button for link/image
 - [ ] XML sitemap & Google Webmaster Tools
@@ -107,8 +110,9 @@ This beta release offers:
 - [ ] Blog posts
 - [ ] Reach out to affiliate marketers who write about making money with Amazon
 
+## Backburner
 
-
+- [ ] On-site Amazon product search
 
 
 
