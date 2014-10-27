@@ -21,10 +21,7 @@ module Amazon
         amzn_url: clean_amzn_url(asin),
         amzn_aff_url: amzn_aff_url(asin, aff_tag)
       }
-    end
-
-    def add_amazon_info
-      @product_info = @product_info.merge(get_params(get_xml(@product_info[:asin], @product_info[:aff_tag])))
+      add_amazon_info
     end
 
     private
@@ -104,6 +101,13 @@ module Amazon
     # Output: XML
     def get_xml(item_id, affiliate_tag)
       HTTParty.get(signed_request(item_id, affiliate_tag))
+    end
+
+    # Calls the Amazon API and adds the extra params in the @product_info hash
+    # Input: none
+    # Output: hash
+    def add_amazon_info
+      @product_info = @product_info.merge(get_params(get_xml(@product_info[:asin], @product_info[:aff_tag])))
     end
   end
 
