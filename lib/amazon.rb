@@ -21,7 +21,6 @@ module Amazon
         amzn_url: clean_amzn_url(asin),
         amzn_aff_url: amzn_aff_url(asin, aff_tag)
       }
-      binding.pry
       add_amazon_info
     end
 
