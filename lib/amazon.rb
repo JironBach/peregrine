@@ -25,8 +25,6 @@ module Amazon
       add_amazon_info
     end
 
-
-
     private
 
     # Returns product url without quary params (this is not an affiliate link)

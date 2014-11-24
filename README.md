@@ -1,4 +1,4 @@
-## About
+z## About
 
 Peregrine helps you quickly generate Amazon affiliate links.
 
@@ -28,11 +28,14 @@ It also integrates with the Amazon API to retrieve information such as:
 
 ### Added
 
-- [ ] Other product recommendations + generate their links with single click
+- [ ] Other product recommendations
+  - [ ] Display product name, link
+  - [ ] Preview amazon product page on link hover (with AJAX)
+  - [ ] Generate affiliate link button
 
 ### Updated
 
-- [ ] Amazon module to class + improvements
+- [x] Amazon module to class + improvements
 
 ### Removed
 
