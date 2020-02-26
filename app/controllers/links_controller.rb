@@ -12,18 +12,26 @@ class LinksController < ApplicationController
     if amazon_url?
       if product_url?
 
-        amzn_link = Amazon.new(get_asin, link_params[:aff_tag])
+#        begin
+          amzn_link = Amazon.new(get_asin, link_params[:aff_tag])
+#        rescue
+          redirect_back(fallback_location: root_path, alert: "Error!!! : " + "asin = #{get_asin}, link=#{link_params[:aff_tag]}")
+          return
+#        end
 
         @link = Link.create(amzn_link.product_info)
         @link.save
         redirect_to @link
 
       else
-        redirect_to :back, alert: "Please enter a Amazon product URL."
+        #redirect_to :back, alert: "Please enter a Amazon product URL."
+        redirect_back(fallback_location: root_path, alert: "Error!!! : " + "asin = #{get_asin}, link=#{link_params[:aff_tag]}")
+        return
       end
 
     else
-      redirect_to :back, alert: "Please enter a valid Amazon URL."
+      #redirect_to :back, alert: "Please enter a valid Amazon URL."
+      redirect_back(fallback_location: root_path, alert: "axin = #{get_asin}, link=#{link_params[:aff_tag]}")
     end
 
     update_aff_tag_if_user_logged_in
@@ -42,7 +50,8 @@ class LinksController < ApplicationController
   end
 
   def amazon_url?
-    link_params[:amzn_url].match("amazon.com") ? true : false
+    #link_params[:amzn_url].match("amazon.com") ? true : false
+    link_params[:amzn_url].match("amazon.co.jp") ? true : false
   end
 
   def product_url?

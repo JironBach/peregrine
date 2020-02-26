@@ -71,7 +71,8 @@ module Amazon
     # Input: string
     # Output: string
     def generate_signature(unsigned_request)
-      Base64.encode64(OpenSSL::HMAC.digest(OpenSSL::Digest::SHA256.new, SECRET_KEY, unsigned_request)).gsub('+', '%2B').gsub('+', '%3d')
+      #Base64.encode64(OpenSSL::HMAC.digest(OpenSSL::Digest::SHA256.new, SECRET_KEY, unsigned_request)).gsub('+', '%2B').gsub('+', '%3d')
+      Base64.encode64(OpenSSL::HMAC::hexdigest(OpenSSL::Digest::SHA256.new, SECRET_KEY, unsigned_request)).gsub('+', '%2B').gsub('+', '%3d')
     end
 
     # Constructs the HTTP request
@@ -112,4 +113,3 @@ module Amazon
     end
   end
 end
-
