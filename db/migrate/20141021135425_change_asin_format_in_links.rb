@@ -1,4 +1,4 @@
-class ChangeAsinFormatInLinks < ActiveRecord::Migration
+class ChangeAsinFormatInLinks < ActiveRecord::Migration[4.2]
 def up
     change_column :links, :asin, :string
   end

@@ -1,4 +1,4 @@
-class CreateLinks < ActiveRecord::Migration
+class CreateLinks < ActiveRecord::Migration[4.2]
   def change
     create_table :links do |t|
       t.integer :asin
@@ -13,7 +13,7 @@ class CreateLinks < ActiveRecord::Migration
       t.string :amzn_aff_url
       t.string :short_aff_url
       t.string :aff_url_clicks
-      t.timestamp
+      t.timestamps
     end
   end
 end

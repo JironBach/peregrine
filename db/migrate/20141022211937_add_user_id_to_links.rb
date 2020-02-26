@@ -1,4 +1,4 @@
-class AddUserIdToLinks < ActiveRecord::Migration
+class AddUserIdToLinks < ActiveRecord::Migration[4.2]
   def self.up
     add_column :links, :user_id, :integer
     add_index 'links', ['user_id']
